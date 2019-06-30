@@ -2,7 +2,7 @@ if('geolocation' in navigator){
     console.log('geolocation available');
 
     navigator.geolocation.getCurrentPosition(async position => {
-        let lat, lon, weather;
+        let lat, lon, weather, air;
         lat = position.coords.latitude;
         lon = position.coords.longitude;
         document.getElementById('latitude').textContent = lat.toFixed(3);
@@ -18,9 +18,10 @@ if('geolocation' in navigator){
         document.getElementById('summary').textContent = weather.summary;
         document.getElementById('temp').textContent = weather.temperature;
 
-         const air = json.air_quality.results[0].measurements[0];
+          air = json.air_quality.results[0].measurements[0];
+          console.log(air);
         //console.log(air);
-        document.getElementById('latest').textContent = air.lastUpdated;
+        //document.getElementById('latest').textContent = air.lastUpdated;
 
     })
 
