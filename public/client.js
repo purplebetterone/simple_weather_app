@@ -21,7 +21,7 @@ if('geolocation' in navigator){
           air = json.air_quality.results[0].measurements[0];
           console.log(air);
         //console.log(air);
-        //document.getElementById('latest').textContent = air.lastUpdated;
+        document.getElementById('latest').textContent = air.lastUpdated;
 
     })
 
